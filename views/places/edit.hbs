@@ -1,0 +1,29 @@
+<h1>Edit a Place</h1>
+
+<form action="/place/{{place._id}}/edit" method="POST">
+  <input type="text" name="name" required placeholder="Place Name" value="{{place.name}}" />
+  <select name="type" >
+
+<option value="bookstore">bookstore</option>
+<option value="coffee shop">coffee shop</option>
+{{!-- {{#ifEquals this.type "bookstore"}}
+<option value="bookstore">bookstore</option>
+<option value="coffee shop">coffee shop</option>
+    
+{{/ifEquals}}
+{{#ifEquals this.type "coffee shop"}}
+<option value="coffee shop">coffee shop</option>
+<option value="bookstore">bookstore</option>
+    
+{{/ifEquals}} --}}
+
+</select>
+
+  <button>Edit</button>
+</form>
+
+<form action="/place/{{place._id}}/delete" method="POST">
+  <button>Delete</button>
+</form>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGD7_VrYPlO5F-qYuZSo_KSNAjHWev2Tg&callback=initMap"></script>

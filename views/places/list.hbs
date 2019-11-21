@@ -1,0 +1,9 @@
+<h2>List of Places</h2>
+
+{{#each places}}
+  <a href="/place/{{id}}">
+    <p>{{name}} {{type}}</p> 
+  </a>
+{{/each}}
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGD7_VrYPlO5F-qYuZSo_KSNAjHWev2Tg&callback=initMap"></script>
